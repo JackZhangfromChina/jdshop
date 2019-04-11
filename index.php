@@ -17,4 +17,4 @@ define('APP_DEBUG',true); //开启调试模式
 
 
 //引入tp框架的接口文件
-include("/ThinkPHP/ThinkPHP.php");
+include("./ThinkPHP/ThinkPHP.php");
