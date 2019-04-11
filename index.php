@@ -1,6 +1,7 @@
 <?php
 header("content-type:text/html;charset=utf-8");
 //定义常量，方便静态资源的引入
+    echo 11;exit;
 define('SITE_URL','http://jdshop.test/');
 define("CSS_URL",SITE_URL."Public/Home/style/");
 define('JS_URL',SITE_URL."Public/Home/js/");
@@ -17,4 +18,4 @@ define('APP_DEBUG',true); //开启调试模式
 
 
 //引入tp框架的接口文件
-include("./ThinkPHP/ThinkPHP.php");
+include("ThinkPHP/ThinkPHP.php");
