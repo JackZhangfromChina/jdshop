@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+        <script type="text/javascript">
+        //与服务器端返回函数调用 的函数声明部分
+        function show_info(obj){
+            console.log('单独函数：');
+            console.log(obj);
+            //xxxxxx....
+        }
+        function f1(){
+            //jsonpCallback:表示服务器端返回的函数调用的“函数名字”
+            //jsonp:定义接收“函数名字”的变量名称，通过get参数传递back=show_info
+            //      在服务器端可以接收$_GET['back']
+            $.ajax({
+                url:'http://web.0911.com/ajax/02.php',
+                data:{'name':'jim','age':21},
+                dataType:'jsonp',
+                jsonpCallback:'show_info',
+                jsonp:'back',
+                success:function(msg){
+                    console.log(msg);//Object { city="beijing", weather="sun", username="jim", 更多...}
+                    //或者是符合业务逻辑要求的代码体现
+                }
+            });
+        }
+        </script>
+    </head>
+    <body>
+        <h2>ajax跨域请求(jsonp方式)</h2>
+        <input type="button" value="请求" onclick="f1()" />
+    </body>
+</html>

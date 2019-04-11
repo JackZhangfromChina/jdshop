@@ -1,0 +1,222 @@
+{__NOLAYOUT__}
+<layout name='Pub/layout2' />
+
+
+<link rel="stylesheet" href="{$Think.const.CSS_URL}fillin.css" type="text/css">
+
+	
+	<div style="clear:both;"></div>
+
+	<!-- 主体部分 start -->
+	<div class="fillin w990 bc mt15">
+		<form action="__SELF__" method="post">
+		<div class="fillin_hd">
+			<h2>填写并核对订单信息</h2>
+		</div>
+
+		<div class="fillin_bd">
+			<!-- 收货人信息  start-->
+			<div class="address">
+				<h3>收货人信息 <a href="javascript:;" id="address_modify">[修改]</a></h3>
+				<div class="address_info">
+					<p>王超平  13555555555 </p>
+					<p>北京 昌平区 西三旗 建材城西路金燕龙办公楼一层 </p>
+				</div>
+
+				<div class="address_select">
+					<ul>
+						<li class="cur">
+							<input type="radio" name="cgn_id" checked="checked" value='131' />王超平 北京市 昌平区 建材城西路金燕龙办公楼一层 13555555555 
+							<a href="">设为默认地址</a>
+							<a href="">编辑</a>
+							<a href="">删除</a>
+						</li>
+						<li>
+							<input type="radio" name="cgn_id" value='132' />王超平 湖北省 武汉市  武昌 关山光谷软件园1号201 13333333333
+							<a href="">设为默认地址</a>
+							<a href="">编辑</a>
+							<a href="">删除</a>
+						</li>
+						<li><input type="radio" name="address" class="new_address"  />使用新地址</li>
+					</ul>	
+
+
+				</div>
+			</div>
+			<!-- 收货人信息  end-->
+
+			<!-- 配送方式 start -->
+			<div class="delivery">
+				<h3>送货方式 <a href="javascript:;" id="delivery_modify">[修改]</a></h3>
+				<div class="delivery_info">
+					<p>普通快递送货上门</p>
+					<p>送货时间不限</p>
+				</div>
+
+				<div class="delivery_select">
+					<table>
+						<thead>
+							<tr>
+								<th class="col1">送货方式</th>
+								<th class="col2">运费</th>
+								<th class="col3">运费标准</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="cur">	
+								<td>
+									<input type="radio" name="shipping" checked="checked" value="0" />圆通
+									<select name="" id="">
+										<option value="">时间不限</option>
+										<option value="">工作日，周一到周五</option>
+										<option value="">周六日及公众假期</option>
+									</select>
+								</td>
+								<td>￥10.00</td>
+								<td>每张订单不满499.00元,运费15.00元, 订单4...</td>
+							</tr>
+							<tr>
+								
+								<td><input type="radio" name="shipping"  value="1"/>申通</td>
+								<td>￥40.00</td>
+								<td>每张订单不满499.00元,运费40.00元, 订单4...</td>
+							</tr>
+							<tr>
+								
+								<td><input type="radio" name="shipping"  value="2"/>韵达</td>
+								<td>￥40.00</td>
+								<td>每张订单不满499.00元,运费40.00元, 订单4...</td>
+							</tr>
+							<tr>
+
+								<td><input type="radio" name="shipping"  value="3"/>顺丰</td>
+								<td>￥10.00</td>
+								<td>每张订单不满499.00元,运费15.00元, 订单4...</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div> 
+			<!-- 配送方式 end --> 
+
+			<!-- 支付方式  start-->
+			<div class="pay">
+				<h3>支付方式 <a href="javascript:;" id="pay_modify">[修改]</a></h3>
+				<div class="pay_info">
+					<p>货到付款</p>
+				</div>
+
+				<div class="pay_select">
+					<table> 
+						<tr class="cur">
+							<td class="col1"><input type="radio" name="pay_method"
+							value='0'  checked='checked'/>支付宝</td>
+							<td class="col2">送货上门后再收款，支持现金、POS机刷卡、支票支付</td>
+						</tr>
+						<tr>
+							<td class="col1"><input type="radio" name="pay_method" /value='1'>货到付款</td>
+							<td class="col2">即时到帐，支持绝大数银行借记卡及部分银行信用卡</td>
+						</tr>
+						<tr>
+							<td class="col1"><input type="radio" name="pay_method" value='2' />上门自提</td>
+							<td class="col2">自提时付款，支持现金、POS刷卡、支票支付</td>
+						</tr>
+					</table>
+
+				</div>
+			</div>
+			<!-- 支付方式  end-->
+
+			<!-- 发票信息 start-->
+			<div class="receipt">
+				<h3>发票信息 <a href="javascript:;" id="receipt_modify">[修改]</a></h3>
+				<div class="receipt_info">
+					<p>个人发票</p>
+					<p>内容：明细</p>
+				</div>
+
+				<div class="receipt_select">
+
+						<ul>
+							<li>
+								<label for="">发票抬头：</label>
+								<input type="radio" name="fapiao_title" checked="checked" class="personal" value='0' />个人
+								<input type="radio" name="fapiao_title" class="company" value='1'/>单位
+								<input type="text" name='fapiao_title_msg' class="txt company_input"  />
+							</li>
+							<li>
+								<label for="">发票内容：</label>
+								<input type="radio" name="fapiao_content" checked="checked" value="0" />办公用品
+								<input type="radio" name="fapiao_content" value="1" />体育休闲
+								<input type="radio" name="fapiao_content" value="2" />餐饮
+								<input type="radio" name="fapiao_content" value="3" />耗材
+							</li>
+						</ul>						
+
+				</div>
+			</div>
+			<!-- 发票信息 end-->
+
+			<!-- 商品清单 start -->
+			<div class="goods">
+				<h3>商品清单</h3>
+				<table>
+					<thead>
+						<tr>
+							<th class="col1">商品</th>
+							<th class="col3">价格</th>
+							<th class="col4">数量</th>
+							<th class="col5">小计</th>
+						</tr>	
+					</thead>
+					<tbody>
+<foreach name="cartinfo" item='v'>					
+<tr>
+	<td class="col1"><a href=""><img src="{$Think.const.IMG_URL}cart_goods1.jpg" alt="" /></a>  <strong><a href="">{$v.goods_name}</a></strong></td>
+	<td class="col3">￥{$v.goods_price}</td>
+	<td class="col4"> {$v.goods_buy_number}</td>
+	<td class="col5"><span>￥{$v.goods_total_price}</span></td>
+</tr>
+</foreach>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="5">
+								<ul>
+									<li>
+										<span>4 件商品，总商品金额：</span>
+										<em>￥5316.00</em>
+									</li>
+									<li>
+										<span>返现：</span>
+										<em>-￥240.00</em>
+									</li>
+									<li>
+										<span>运费：</span>
+										<em>￥10.00</em>
+									</li>
+									<li>
+										<span>应付总额：</span>
+										<em>￥5076.00</em>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<!-- 商品清单 end -->
+		
+		</div>
+
+		<div class="fillin_ft">
+			<span><input type="submit" value='提交订单' /></span>
+			<p>应付总额：<strong>￥{$number_price.price}元</strong></p>
+			
+		</div>
+		</form>
+	</div>
+	<!-- 主体部分 end -->
+
+	<div style="clear:both;"></div>

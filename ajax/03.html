@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        function show_info3(obj){
+            console.log(obj);
+            //... 或者其他业务逻辑代码
+        }
+        </script>
+        <!--
+        <script type="text/javascript" src="http://web.0911.com/ajax/03.php"></script>
+        -->
+        <script type="text/javascript">
+        function f1(){
+            //自己主动触发跨域请求
+            //通过dom方式绘制script标签并执行
+            var st = document.createElement('script');
+            st.setAttribute('type','text/javascript');
+            st.setAttribute('src','http://web.0911.com/ajax/03.php');
+            //追加script标签给body
+            document.body.appendChild(st);//document.getElementsByTagName('body')[0]
+        }
+        </script>
+    </head>
+    <body>
+        <h2>jsonp跨域请求原理</h2>
+        <input type="button" value="请求" onclick="f1()" />
+    </body>
+</html>

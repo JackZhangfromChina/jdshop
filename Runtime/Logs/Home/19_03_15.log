@@ -1,0 +1,62 @@
+[ 2019-03-15T20:11:51+08:00 ] 127.0.0.1 /
+ERR: 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2019-03-15T20:14:01+08:00 ] 127.0.0.1 /index.php/Home/Comment/getPageInfo/goods_id/22?page_index=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0148s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '0'  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '1'  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '2'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_comment` [ RunTime:0.0109s ]
+SQL: SELECT c.cmt_id,c.cmt_msg,from_unixtime(c.add_time) as cmt_add_time,c.cmt_star,uu.user_name as cmt_user_name FROM sp_comment c INNER JOIN sp_user uu on c.user_id=uu.user_id  WHERE c.goods_id = '22' ORDER BY c.cmt_id desc LIMIT 0,3   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_back` [ RunTime:0.0080s ]
+SQL: SELECT b.back_id,b.back_msg,from_unixtime(b.add_time) as back_add_time,u.user_name as back_user_name,b.cmt_id FROM sp_back b left join sp_user u on b.user_id=u.user_id  WHERE `cmt_id` IN ('2560','2556','2550')  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2019-03-15T20:14:06+08:00 ] 127.0.0.1 /index.php/Home/Shop/addCart?goods_id=22
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '0'  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '1'  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '2'  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0064s ]
+SQL: SELECT `goods_id`,`goods_name`,goods_shop_price goods_price,goods_shop_price goods_total_price FROM `sp_goods` WHERE `goods_id` = 22 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2019-03-15T23:55:57+08:00 ] 127.0.0.1 /index.php/Home/User/isLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001438s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '0'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '1'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '2'  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001006s ]
+
+[ 2019-03-15T23:55:59+08:00 ] 127.0.0.1 /index.php/Home/Comment/getPageInfo/goods_id/22?page_index=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `sp_category` [ RunTime:0.0271s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '0'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '1'  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sp_category` WHERE `cat_level` = '2'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sp_comment` [ RunTime:0.0105s ]
+SQL: SELECT c.cmt_id,c.cmt_msg,from_unixtime(c.add_time) as cmt_add_time,c.cmt_star,uu.user_name as cmt_user_name FROM sp_comment c INNER JOIN sp_user uu on c.user_id=uu.user_id  WHERE c.goods_id = '22' ORDER BY c.cmt_id desc LIMIT 0,3   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sp_back` [ RunTime:0.0108s ]
+SQL: SELECT b.back_id,b.back_msg,from_unixtime(b.add_time) as back_add_time,u.user_name as back_user_name,b.cmt_id FROM sp_back b left join sp_user u on b.user_id=u.user_id  WHERE `cmt_id` IN ('2560','2556','2550')  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000912s ]
+

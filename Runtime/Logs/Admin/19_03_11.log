@@ -1,0 +1,181 @@
+[ 2019-03-11T21:44:36+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2019-03-11T22:35:50+08:00 ] 127.0.0.1 /index.php/Admin/Manager/checkVerify?code=rljb
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001363s ]
+
+[ 2019-03-11T22:36:08+08:00 ] 127.0.0.1 /index.php/Admin/Manager/checkVerify?code=un3h
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001146s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001191s ]
+
+[ 2019-03-11T22:36:12+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021141s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2019-03-11T22:36:13+08:00 ] 127.0.0.1 /index.php/Admin/Index/top.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2019-03-11T22:36:14+08:00 ] 127.0.0.1 /index.php/Admin/Index/center.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000056s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020868s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021761s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000901s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001925s ]
+
+[ 2019-03-11T22:36:15+08:00 ] 127.0.0.1 /index.php/Admin/Index/down.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.115500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000983s ]
+
+[ 2019-03-11T22:36:17+08:00 ] 127.0.0.1 /index.php/Admin/Index/left.html
+SQL: SHOW COLUMNS FROM `sp_auth` [ RunTime:0.0290s ]
+SQL: SELECT `auth_id`,`auth_name`,`auth_pid`,`auth_c`,`auth_a` FROM `sp_auth` WHERE `auth_level` = 0  [ RunTime:0.0004s ]
+SQL: SELECT `auth_id`,`auth_name`,`auth_pid`,`auth_c`,`auth_a` FROM `sp_auth` WHERE `auth_level` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000039s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007510s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000910s ]
+
+[ 2019-03-11T22:36:23+08:00 ] 127.0.0.1 /index.php/Admin/Goods/showlist
+ERR: 1054:Unknown column '*' in 'field list'
+ [ SQL语句 ] : SELECT COUNT(`*`) AS tp_count FROM `sp_goods` LIMIT 1  
+
+[ 2019-03-11T22:38:17+08:00 ] 127.0.0.1 /index.php/Admin/Goods/showlist
+ERR: 1054:Unknown column '*' in 'field list'
+ [ SQL语句 ] : SELECT COUNT(`*`) AS tp_count FROM `sp_goods` LIMIT 1  
+
+[ 2019-03-11T22:38:19+08:00 ] 127.0.0.1 /index.php/Admin/Goods/showlist
+ERR: 1054:Unknown column '*' in 'field list'
+ [ SQL语句 ] : SELECT COUNT(`*`) AS tp_count FROM `sp_goods` LIMIT 1  
+
+[ 2019-03-11T22:38:53+08:00 ] 127.0.0.1 /index.php/Admin/Goods/showlist
+ERR: 1054:Unknown column '*' in 'field list'
+ [ SQL语句 ] : SELECT COUNT(`*`) AS tp_count FROM `sp_goods` LIMIT 1  
+
+[ 2019-03-11T22:39:14+08:00 ] 127.0.0.1 /index.php/Admin/Goods/showlist
+ERR: 1054:Unknown column 'id' in 'field list'
+ [ SQL语句 ] : SELECT COUNT(`id`) AS tp_count FROM `sp_goods` LIMIT 1  
+
+[ 2019-03-11T22:42:03+08:00 ] 127.0.0.1 /index.php/Admin/Brand/showlist
+ERR: 无法加载控制器:Brand
+
+[ 2019-03-11T22:42:23+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+ERR: 非法操作:showlist
+
+[ 2019-03-11T22:45:16+08:00 ] 127.0.0.1 /index.php/Admin/Goods/changeQiang?goods_id=46&flag=qiang
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `sp_manager` [ RunTime:0.0100s ]
+SQL: SELECT r.role_auth_ac FROM sp_manager m left join sp_role r on m.role_id=r.role_id  WHERE m.mg_id = '502' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `sp_goods` WHERE `goods_id` = 46 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `sp_goods` SET `goods_is_qiang`='抢' WHERE `goods_id` = 46 [ RunTime:0.1840s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000715s ]
+
+[ 2019-03-11T22:45:23+08:00 ] 127.0.0.1 /index.php/Admin/Goods/changeQiang?goods_id=46&flag=rec
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001784s ]
+SQL: SHOW COLUMNS FROM `sp_manager` [ RunTime:0.0084s ]
+SQL: SELECT r.role_auth_ac FROM sp_manager m left join sp_role r on m.role_id=r.role_id  WHERE m.mg_id = '502' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `sp_goods` WHERE `goods_id` = 46 LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `sp_goods` SET `goods_is_rec`='推荐' WHERE `goods_id` = 46 [ RunTime:0.1278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000933s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2019-03-11T22:45:25+08:00 ] 127.0.0.1 /index.php/Admin/Goods/changeQiang?goods_id=46&flag=new
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+SQL: SHOW COLUMNS FROM `sp_manager` [ RunTime:0.0079s ]
+SQL: SELECT r.role_auth_ac FROM sp_manager m left join sp_role r on m.role_id=r.role_id  WHERE m.mg_id = '502' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `sp_goods` WHERE `goods_id` = 46 LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `sp_goods` SET `goods_is_new`='新品' WHERE `goods_id` = 46 [ RunTime:0.1190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000887s ]
+
+[ 2019-03-11T22:45:26+08:00 ] 127.0.0.1 /index.php/Admin/Goods/changeQiang?goods_id=46&flag=hot
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `sp_manager` [ RunTime:0.0094s ]
+SQL: SELECT r.role_auth_ac FROM sp_manager m left join sp_role r on m.role_id=r.role_id  WHERE m.mg_id = '502' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sp_goods` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `sp_goods` WHERE `goods_id` = 46 LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `sp_goods` SET `goods_is_hot`='热' WHERE `goods_id` = 46 [ RunTime:0.0356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000706s ]
+

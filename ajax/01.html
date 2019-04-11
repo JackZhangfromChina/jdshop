@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+        function f1(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    console.log(xhr.responseText);
+                }
+            }
+            //xhr.open('get','http://web.0911.com/ajax/01.php');
+            xhr.open('get','./daili.php');//通过代理实现跨域请求
+            xhr.send(null);
+        }
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h2>ajax跨域请求(php代理)</h2>
+        <input type="button" value='请求' onclick="f1()" />
+    </body>
+</html>

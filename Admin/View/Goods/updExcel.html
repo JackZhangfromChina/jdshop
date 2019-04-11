@@ -1,0 +1,39 @@
+  <tr>
+    <td>
+    <form action="__SELF__" method="post" enctype="multipart/form-data">
+    <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce" >
+      <notempty name='excel_name'>
+        <tr>
+          <td height="20" bgcolor="#FFFFFF" class="STYLE6"><div align="right"><span class="STYLE19">当前excel文件名称：</span></div></td>
+          <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="left">
+          <input type='hidden' name='act' value='in' />
+          <input type='hidden' name='excel_name' value='{$excel_name}' />
+          {$excel_name}
+          </div></td>
+        </tr>
+        <tr>
+          <td height="20" bgcolor="#FFFFFF" class="STYLE6" colspan='2'>
+          <div align="center">
+          <input type="submit" value="对该excel的数据进行导入" />
+          </div></td>
+        </tr>
+      <else />
+        <tr>
+          <td height="20" bgcolor="#FFFFFF" class="STYLE6"><div align="right"><span class="STYLE19">上传excel文件：</span></div></td>
+          <td height="20" bgcolor="#FFFFFF" class="STYLE19"><div align="left">
+          <input type='hidden' name='act' value='upd' />
+          <input type='file' name='goods_excel' />
+          </div></td>
+        </tr>
+        <tr>
+          <td height="20" bgcolor="#FFFFFF" class="STYLE6" colspan='2'>
+          <div align="center">
+          <input type="submit" value="上传excel" />
+          </div></td>
+        </tr>
+      </notempty>
+    </table>
+    </form>
+    </td>
+  </tr>
+

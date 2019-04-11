@@ -1,0 +1,113 @@
+{__NOLAYOUT__}
+<layout name='Pub/layout2' />
+<link rel="stylesheet" href="{$Think.const.CSS_URL}cart.css" type="text/css">
+
+<div style="clear:both;"></div>
+<!-- 主体部分 start -->
+<div class="mycart w990 mt10 bc">
+	<h2><span>我的购物车</span></h2>
+	<table>
+		<thead>
+			<tr>
+				<th class="col1">商品名称</th>
+				<th class="col3">单价</th>
+				<th class="col4">数量</th>	
+				<th class="col5">小计</th>
+				<th class="col6">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+<script type="text/javascript">
+//参数：
+//flag 动作标志：add/red/mod
+function change_number(flag,goods_id){
+	if(flag === 'add'){
+		//获得商品原先数量，并累加1操作
+		var goods_number = $('#goods_'+goods_id).val();
+		goods_number = parseInt(goods_number)+1;
+	}else if(flag === 'red'){
+		//商品数量减少
+		var goods_number = $('#goods_'+goods_id).val();
+		goods_number = parseInt(goods_number)-1;
+		if(goods_number <1){
+			alert('数量不能小于1');
+			return false;
+		}
+	}else if(flag === 'mod'){
+		//商品数量手工输入
+		var goods_number = $('#goods_'+goods_id).val();
+		goods_number = goods_number;
+		//goods_number要求是一个"有意义"的数字信息
+		var reg = /^[1-9]\d*$/;
+		if(goods_number.match(reg) == null){
+			alert('输入的数量不合法');
+			return false;
+		}
+	}else{
+		alert('参数有问题');
+		return false;
+	}
+	//调用ajax，请求服务器端，使得购物车cookie对应商品数量发生变化
+	$.ajax({
+		url:"__CONTROLLER__/changeNumber",
+		data:{'goods_id':goods_id,'number':goods_number},
+		dataType:'json',
+		type:'get',
+		success:function(msg){
+			//console.log(msg);{"xiaoji":36000,"number":430,"price":1272000}
+			$('#goods_'+goods_id).val(goods_number);//数量变化
+			$('#xiaoji_'+goods_id).html(msg.xiaoji);//单个商品小计价格变化
+			$('#total').html(msg.price)//更新总价格
+		}
+	});
+}
+
+//删除购物车指定的商品
+function del_goods(goods_id,obj){
+	//ajax请求服务器端，删除购物车商品
+	$.ajax({
+		url:"/index.php/Home/Shop/delGoods",
+		data:{'goods_id':goods_id},
+		dataType:'json',
+		type:'get',
+		success:function(msg){
+			//console.log(msg);//Object { number=3, price=5340}
+			//dom删除商品
+			$(obj).parent().parent().remove();
+			//把删除商品后的购物车总价格刷新到页面上
+			$('#total').html(msg.price);
+		}
+	});
+}
+</script>
+<foreach name='cartinfo' item='v'>
+<tr>
+	<td class="col1"><a href=""><img src="images/cart_goods1.jpg" alt="" /></a>  <strong><a href="">{$v.goods_name}</a></strong></td>
+	<td class="col3">￥<span>{$v.goods_price}</span></td>
+	<td class="col4"> 
+		<a href="javascript:;" onclick="change_number('red',{$v.goods_id})" class="reduce_num"></a>
+		<input type="text" name="amount" value="{$v.goods_buy_number}" class="amount" id="goods_{$v.goods_id}"
+		onchange="change_number('mod',{$v.goods_id})"
+		/>
+		<a href="javascript:change_number('add',{$v.goods_id})" class="add_num"></a>
+	</td>
+	<td class="col5">￥<span id="xiaoji_{$v.goods_id}">{$v.goods_total_price}</span></td>
+	<td class="col6"><a href="javascript:;" onclick="if(confirm('确认要删除该商品么？')){del_goods({$v.goods_id},this)}">删除</a></td>
+</tr>
+</foreach>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="6">购物金额总计： <strong>￥ <span id="total">{$number_price.price}</span></strong></td>
+			</tr>
+		</tfoot>
+	</table>
+	<div class="cart_btn w990 bc mt10">
+		<a href="" class="continue">继续购物</a>
+		<a href="{:U('flow2')}" class="checkout" target="_blank">结 算</a>
+	</div>
+</div>
+<!-- 主体部分 end -->
+
+<div style="clear:both;"></div>
+	
